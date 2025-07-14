@@ -1,13 +1,13 @@
 
 body {
   background: #111;
-  color: white;
+  color: RED;
   font-family: sans-serif;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
 }
 select, button {
-  margin: 10px;
+  margin: 13px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 19px;
 }
