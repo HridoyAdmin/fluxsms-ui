@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FluxSMS Inbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📱 FluxSMS Inbox</h1>
+    <div id="statusBox">
+      <h2>Your Number</h2>
+      <p id="number">+880XXXXXXXXXX</p>
+      <h3>🔑 Recent OTPs</h3>
+      <ul id="otpList"><li>Loading...</li></ul>
+    </div>
+    <div class="actions">
+      <button onclick="mute()">🔕 Mute</button>
+      <button onclick="unmute()">🔔 Unmute</button>
+      <button onclick="reloadData()">🔄 Refresh</button>
+    </div>
+    <footer><small>Powered by FluxSMS v1.0</small></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
