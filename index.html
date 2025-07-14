@@ -3,25 +3,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FluxSMS Inbox</title>
+  <title>FluxSMS MiniApp</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>📱 FluxSMS Inbox</h1>
-    <div id="statusBox">
-      <h2>Your Number</h2>
-      <p id="number">+880XXXXXXXXXX</p>
-      <h3>🔑 Recent OTPs</h3>
-      <ul id="otpList"><li>Loading...</li></ul>
-    </div>
-    <div class="actions">
-      <button onclick="mute()">🔕 Mute</button>
-      <button onclick="unmute()">🔔 Unmute</button>
-      <button onclick="reloadData()">🔄 Refresh</button>
-    </div>
-    <footer><small>Powered by FluxSMS v1.0</small></footer>
-  </div>
+  <h1>📱 FluxSMS MiniApp</h1>
+  <select id="country">
+    <option value="+880">🇧🇩 Bangladesh</option>
+    <option value="+91">🇮🇳 India</option>
+  </select>
+  <button onclick="getNumber()">Get Number</button>
+  <p><b>Your Number:</b> <span id="assignedNumber">Loading...</span></p>
+  <button onclick="changeNumber()">Change Number</button>
+  <h3>Recent OTPs</h3>
+  <ul id="otpList"></ul>
   <script src="app.js"></script>
 </body>
 </html>

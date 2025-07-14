@@ -1,21 +1,11 @@
 
-function reloadData() {
-  const otps = ["1234", "6543", "9911"]; // Placeholder
-  const number = "+8801234567890"; // Placeholder
-
-  document.getElementById("number").innerText = number;
-  const ul = document.getElementById("otpList");
-  ul.innerHTML = "";
-  otps.forEach(otp => {
-    const li = document.createElement("li");
-    li.innerText = "• OTP: " + otp;
-    ul.appendChild(li);
-  });
+function getNumber() {
+  const code = document.getElementById("country").value;
+  Telegram.WebApp.sendData(JSON.stringify({ action: "get_number", code }));
 }
-function mute() {
-  alert("🔕 Mute enabled!");
+function changeNumber() {
+  Telegram.WebApp.sendData(JSON.stringify({ action: "change_number" }));
 }
-function unmute() {
-  alert("🔔 Unmute enabled!");
-}
-window.onload = reloadData;
+Telegram.WebApp.ready();
+document.getElementById("assignedNumber").innerText = "+8801234567890";
+document.getElementById("otpList").innerHTML = "<li>478912</li><li>834762</li><li>123904</li>";
